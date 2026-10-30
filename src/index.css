@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
-/* A soft, matte rainbow made from cool blue, lavender, aqua and a hint of pink. */
+/* ShopEase uses a soft blue-rainbow palette in light mode. */
 :root {
-  color-scheme: light;
   font-family: Arial, Helvetica, sans-serif;
-  background: #f5f8ff;
+  color-scheme: light;
+  background: #f4f7ff;
 }
 
 * {
@@ -15,49 +15,162 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background:
-    radial-gradient(ellipse at 8% 8%, rgba(158, 198, 255, 0.42), transparent 36%),
-    radial-gradient(ellipse at 92% 12%, rgba(202, 185, 255, 0.36), transparent 34%),
-    radial-gradient(ellipse at 80% 78%, rgba(159, 230, 239, 0.30), transparent 38%),
-    radial-gradient(ellipse at 12% 88%, rgba(255, 202, 225, 0.22), transparent 35%),
-    #f5f8ff;
-  background-attachment: fixed;
+  background: #f4f7ff;
+  transition: background-color 200ms ease, color 200ms ease;
 }
 
-/* Use this on page wrappers so the blended background remains visible. */
+#root {
+  min-height: 100vh;
+}
+
 .rainbow-matte-background {
   min-height: 100vh;
   background:
-    radial-gradient(ellipse at 8% 8%, rgba(158, 198, 255, 0.32), transparent 36%),
-    radial-gradient(ellipse at 92% 12%, rgba(202, 185, 255, 0.28), transparent 34%),
-    radial-gradient(ellipse at 80% 78%, rgba(159, 230, 239, 0.24), transparent 38%),
-    radial-gradient(ellipse at 12% 88%, rgba(255, 202, 225, 0.18), transparent 35%),
-    #f5f8ff;
+    radial-gradient(ellipse at 8% 8%, rgba(158, 198, 255, 0.48), transparent 36%),
+    radial-gradient(ellipse at 92% 12%, rgba(202, 185, 255, 0.42), transparent 34%),
+    radial-gradient(ellipse at 80% 78%, rgba(159, 230, 239, 0.36), transparent 38%),
+    radial-gradient(ellipse at 12% 88%, rgba(255, 202, 225, 0.28), transparent 35%),
+    #f4f7ff;
+  transition: background 200ms ease, color 200ms ease;
 }
 
-/* Soft glass-like white panels keep product information easy to read. */
 .rainbow-matte-panel {
-  border: 1px solid rgba(255, 255, 255, 0.85);
-  background: rgba(255, 255, 255, 0.82);
-  box-shadow: 0 12px 35px rgba(76, 103, 155, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 12px 35px rgba(76, 103, 155, 0.10);
   backdrop-filter: blur(14px);
 }
 
-/* A calm blue-to-lavender gradient for primary actions. */
 .rainbow-matte-button {
-  background: linear-gradient(110deg, #568eea 0%, #7888e8 48%, #a28be8 100%);
-  box-shadow: 0 7px 18px rgba(104, 126, 220, 0.20);
+  background: linear-gradient(110deg, #397fdf 0%, #777de2 52%, #a17fd5 100%);
+  box-shadow: 0 7px 18px rgba(104, 126, 220, 0.24);
   transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
 }
 
 .rainbow-matte-button:hover {
-  filter: saturate(1.08) brightness(1.03);
-  box-shadow: 0 10px 22px rgba(104, 126, 220, 0.28);
+  filter: saturate(1.12) brightness(1.04);
+  box-shadow: 0 10px 22px rgba(104, 126, 220, 0.32);
   transform: translateY(-1px);
 }
 
 .rainbow-matte-text {
-  background: linear-gradient(100deg, #397fd7, #7779d8 52%, #a27bcb);
+  background: linear-gradient(100deg, #2876d2, #7771d5 52%, #a06fbd);
   background-clip: text;
   color: transparent;
+}
+
+/* Dark theme: keep the same blue, aqua and lavender identity with deeper tones. */
+[data-theme="dark"] {
+  color-scheme: dark;
+  background: #101827;
+  color: #e5ecf8;
+}
+
+[data-theme="dark"].rainbow-matte-background,
+[data-theme="dark"] .rainbow-matte-background {
+  background:
+    radial-gradient(ellipse at 8% 8%, rgba(49, 93, 157, 0.34), transparent 36%),
+    radial-gradient(ellipse at 92% 12%, rgba(105, 76, 153, 0.30), transparent 34%),
+    radial-gradient(ellipse at 80% 78%, rgba(35, 119, 135, 0.22), transparent 38%),
+    radial-gradient(ellipse at 12% 88%, rgba(135, 72, 112, 0.18), transparent 35%),
+    #101827;
+}
+
+[data-theme="dark"] .rainbow-matte-panel {
+  border-color: rgba(148, 163, 184, 0.18);
+  background: rgba(25, 38, 58, 0.88);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.22);
+}
+
+[data-theme="dark"] header {
+  border-color: rgba(148, 163, 184, 0.18);
+  background: rgba(17, 27, 43, 0.88);
+}
+
+[data-theme="dark"] .bg-white,
+[data-theme="dark"] .bg-white\/75,
+[data-theme="dark"] .bg-white\/60 {
+  background-color: #19263a !important;
+}
+
+[data-theme="dark"] .bg-slate-50,
+[data-theme="dark"] .from-blue-50,
+[data-theme="dark"] .via-indigo-50,
+[data-theme="dark"] .to-violet-50 {
+  background-color: #202f46 !important;
+}
+
+[data-theme="dark"] .text-slate-900,
+[data-theme="dark"] .text-slate-800,
+[data-theme="dark"] .text-slate-700 {
+  color: #edf3ff !important;
+}
+
+[data-theme="dark"] .text-slate-600,
+[data-theme="dark"] .text-slate-500 {
+  color: #aebbd0 !important;
+}
+
+[data-theme="dark"] .border-slate-200,
+[data-theme="dark"] .border-slate-300,
+[data-theme="dark"] .border-white\/80,
+[data-theme="dark"] .border-white\/70 {
+  border-color: rgba(148, 163, 184, 0.24) !important;
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  border-color: #465873;
+  background-color: #17243a;
+  color: #edf3ff;
+}
+
+[data-theme="dark"] input::placeholder {
+  color: #91a1b9;
+}
+
+[data-theme="dark"] .bg-gradient-to-br.from-blue-50 {
+  background-image: linear-gradient(135deg, #203652, #302c4d, #263b4d);
+}
+
+[data-theme="dark"] footer {
+  border-color: rgba(148, 163, 184, 0.18);
+  background: rgba(17, 27, 43, 0.78);
+}
+
+[data-theme="dark"] .bg-red-50 {
+  background-color: #482b37;
+}
+
+[data-theme="dark"] .text-red-700 {
+  color: #fecdd3;
+}
+
+[data-theme="dark"] .bg-green-100 {
+  background-color: #174b40;
+}
+
+[data-theme="dark"] .border-green-200 {
+  border-color: #276454;
+}
+
+[data-theme="dark"] .bg-amber-50 {
+  background-color: #493b20;
+}
+
+[data-theme="dark"] .text-amber-700 {
+  color: #fcd78a;
+}
+
+[data-theme="dark"] .bg-indigo-600 {
+  background-color: #536bd0;
+}
+
+[data-theme="dark"] .hover\\:bg-indigo-700:hover {
+  background-color: #657ee5;
+}
+
+[data-theme="dark"] .rainbow-matte-text {
+  background-image: linear-gradient(100deg, #8fc5ff, #c0aaff 52%, #9de4e8);
 }
