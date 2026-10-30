@@ -72,7 +72,7 @@ function Checkout() {
       <h1 className="mt-5 text-3xl font-extrabold">Checkout</h1>
       <p className="mt-2 text-slate-500">Enter your shipping details to place a demo order.</p>
       <div className="mt-8 grid items-start gap-8 lg:grid-cols-3">
-        <form onSubmit={handleSubmit} className="space-y-6 rounded-2xl border border-slate-200 bg-white p-6 lg:col-span-2">
+        <form onSubmit={handleSubmit} className="rainbow-matte-panel space-y-6 rounded-2xl p-6 lg:col-span-2">
           <section>
             <h2 className="text-xl font-bold">Shipping Information</h2>
             <div className="mt-5 grid gap-5 sm:grid-cols-2">
@@ -103,7 +103,7 @@ function Checkout() {
           <button type="submit" className="w-full rounded-xl bg-indigo-600 px-6 py-4 font-semibold text-white transition hover:bg-indigo-700">Place Demo Order</button>
           <p className="text-center text-xs text-slate-500">Demo only. No payment details are requested or processed.</p>
         </form>
-        <aside className="h-fit rounded-2xl border border-slate-200 bg-white p-6 lg:sticky lg:top-24">
+        <aside className="rainbow-matte-panel h-fit rounded-2xl p-6 lg:sticky lg:top-24">
           <h2 className="text-xl font-bold">Order Summary</h2>
           <div className="mt-5 space-y-4">
             {cart.map((item) => (
