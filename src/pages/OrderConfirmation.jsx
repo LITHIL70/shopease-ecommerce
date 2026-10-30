@@ -24,7 +24,7 @@ function OrderConfirmation() {
 
   return (
     <main className="mx-auto max-w-4xl px-5 py-12">
-      <section className="rounded-2xl border border-green-200 bg-white p-6 text-center shadow-sm sm:p-10">
+      <section className="rainbow-matte-panel rounded-2xl p-6 text-center sm:p-10">
         <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 text-3xl text-green-700" aria-hidden="true">✓</div>
         <h1 className="mt-5 text-3xl font-extrabold text-slate-900">Thank you for your order!</h1>
         <p className="mt-3 text-slate-600">Your ShopEase demo order has been placed successfully.</p>
@@ -33,7 +33,7 @@ function OrderConfirmation() {
         <p className="mt-2 text-xs text-slate-500">Demo only — no payment was processed.</p>
       </section>
       <div className="mt-8 grid gap-6 md:grid-cols-2">
-        <section className="rounded-2xl border border-slate-200 bg-white p-6">
+        <section className="rainbow-matte-panel rounded-2xl p-6">
           <h2 className="text-xl font-bold">Shipping Details</h2>
           <p className="mt-4 font-semibold">{customer.fullName}</p>
           <p className="mt-1 text-slate-600">{customer.email}</p>
