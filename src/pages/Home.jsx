@@ -45,11 +45,11 @@ function Home() {
   })
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
+    <div className="rainbow-matte-background text-slate-900">
       <main className="mx-auto max-w-7xl px-5 py-10">
         {/* Hero section */}
-        <section className="rounded-3xl bg-indigo-600 px-6 py-12 text-white sm:px-10 sm:py-16">
-          <p className="text-sm font-semibold uppercase tracking-widest text-indigo-200">
+        <section className="rounded-3xl bg-gradient-to-br from-blue-500 via-indigo-400 to-violet-400 px-6 py-12 text-white shadow-xl shadow-indigo-200/50 sm:px-10 sm:py-16">
+          <p className="text-sm font-semibold uppercase tracking-widest text-blue-100">
             Welcome to ShopEase
           </p>
 
@@ -57,7 +57,7 @@ function Home() {
             Find something you'll love.
           </h1>
 
-          <p className="mt-4 max-w-xl text-indigo-100">
+          <p className="mt-4 max-w-xl text-violet-50">
             Explore our collection of everyday essentials and
             discover products picked for you.
           </p>
@@ -148,7 +148,7 @@ function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="mt-16 border-t border-slate-200 bg-white px-5 py-8 text-center text-sm text-slate-500">
+      <footer className="mt-16 border-t border-white/70 bg-white/60 px-5 py-8 backdrop-blur-xl text-center text-sm text-slate-500">
         © 2026 ShopEase. Built with React and Tailwind CSS.
       </footer>
     </div>
