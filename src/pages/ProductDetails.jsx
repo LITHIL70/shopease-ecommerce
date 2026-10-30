@@ -1,57 +1,54 @@
-
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useCart } from '../context/CartContext.jsx'
+import { getProductById } from '../services/productApi.js'
 
 function ProductDetails() {
+  // Read the product ID from the current route, for example /product/3.
   const { id } = useParams()
   const { addToCart } = useCart()
 
   const [product, setProduct] = useState(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState('')
+  const [isLoading, setIsLoading] = useState(true)
+  const [errorMessage, setErrorMessage] = useState('')
 
   useEffect(() => {
-    let cancelled = false
+    let isComponentActive = true
 
-    async function loadProduct() {
+    async function loadProductDetails() {
       try {
-        setLoading(true)
-        setError('')
+        setIsLoading(true)
+        setErrorMessage('')
         setProduct(null)
 
-        const response = await fetch(
-          `https://fakestoreapi.com/products/${id}`
-        )
+        // All product requests use the shared Axios service.
+        const productData = await getProductById(id)
 
-        if (!response.ok) {
-          throw new Error('Product not found')
+        if (isComponentActive) {
+          setProduct(productData)
         }
-
-        const data = await response.json()
-
-        if (!cancelled) {
-          setProduct(data)
-        }
-      } catch {
-        if (!cancelled) {
-          setError('Unable to load this product. Please try again.')
+      } catch (error) {
+        if (isComponentActive) {
+          setErrorMessage(
+            error.message || 'Unable to load this product. Please try again.'
+          )
         }
       } finally {
-        if (!cancelled) {
-          setLoading(false)
+        if (isComponentActive) {
+          setIsLoading(false)
         }
       }
     }
 
-    loadProduct()
+    loadProductDetails()
 
+    // Prevent state updates when the user leaves this page before loading ends.
     return () => {
-      cancelled = true
+      isComponentActive = false
     }
   }, [id])
 
-  if (loading) {
+  if (isLoading) {
     return (
       <main className="mx-auto max-w-7xl px-5 py-20 text-center">
         <p className="text-lg text-slate-500">
@@ -61,7 +58,7 @@ function ProductDetails() {
     )
   }
 
-  if (error || !product) {
+  if (errorMessage || !product) {
     return (
       <main className="mx-auto max-w-7xl px-5 py-20 text-center">
         <h1 className="text-2xl font-bold text-slate-900">
@@ -69,7 +66,7 @@ function ProductDetails() {
         </h1>
 
         <p className="mt-3 text-slate-500">
-          {error || 'We could not find this product.'}
+          {errorMessage || 'We could not find this product.'}
         </p>
 
         <Link
@@ -114,7 +111,7 @@ function ProductDetails() {
 
           <div className="mt-4 flex flex-wrap items-center gap-3">
             <span className="text-3xl font-bold text-slate-900">
-              ${product.price.toFixed(2)}
+              ${Number(product.price).toFixed(2)}
             </span>
 
             <span className="rounded-lg bg-amber-50 px-3 py-1 text-sm font-semibold text-amber-700">
