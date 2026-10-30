@@ -130,8 +130,9 @@ body {
   color: #91a1b9;
 }
 
-[data-theme="dark"] .bg-gradient-to-br.from-blue-50 {
-  background-image: linear-gradient(135deg, #203652, #302c4d, #263b4d);
+/* Product image areas use a darker blended gradient in dark mode. */
+[data-theme="dark"] .group .bg-gradient-to-br {
+  background-image: linear-gradient(135deg, #203652, #302c4d, #263b4d) !important;
 }
 
 [data-theme="dark"] footer {
