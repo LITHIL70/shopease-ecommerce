@@ -1,9 +1,63 @@
-
 @import "tailwindcss";
+
+/* A soft, matte rainbow made from cool blue, lavender, aqua and a hint of pink. */
+:root {
+  color-scheme: light;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f8ff;
+}
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(ellipse at 8% 8%, rgba(158, 198, 255, 0.42), transparent 36%),
+    radial-gradient(ellipse at 92% 12%, rgba(202, 185, 255, 0.36), transparent 34%),
+    radial-gradient(ellipse at 80% 78%, rgba(159, 230, 239, 0.30), transparent 38%),
+    radial-gradient(ellipse at 12% 88%, rgba(255, 202, 225, 0.22), transparent 35%),
+    #f5f8ff;
+  background-attachment: fixed;
+}
+
+/* Use this on page wrappers so the blended background remains visible. */
+.rainbow-matte-background {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 8% 8%, rgba(158, 198, 255, 0.32), transparent 36%),
+    radial-gradient(ellipse at 92% 12%, rgba(202, 185, 255, 0.28), transparent 34%),
+    radial-gradient(ellipse at 80% 78%, rgba(159, 230, 239, 0.24), transparent 38%),
+    radial-gradient(ellipse at 12% 88%, rgba(255, 202, 225, 0.18), transparent 35%),
+    #f5f8ff;
+}
+
+/* Soft glass-like white panels keep product information easy to read. */
+.rainbow-matte-panel {
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 12px 35px rgba(76, 103, 155, 0.08);
+  backdrop-filter: blur(14px);
+}
+
+/* A calm blue-to-lavender gradient for primary actions. */
+.rainbow-matte-button {
+  background: linear-gradient(110deg, #568eea 0%, #7888e8 48%, #a28be8 100%);
+  box-shadow: 0 7px 18px rgba(104, 126, 220, 0.20);
+  transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+}
+
+.rainbow-matte-button:hover {
+  filter: saturate(1.08) brightness(1.03);
+  box-shadow: 0 10px 22px rgba(104, 126, 220, 0.28);
+  transform: translateY(-1px);
+}
+
+.rainbow-matte-text {
+  background: linear-gradient(100deg, #397fd7, #7779d8 52%, #a27bcb);
+  background-clip: text;
+  color: transparent;
 }
