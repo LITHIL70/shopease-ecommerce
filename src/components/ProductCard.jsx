@@ -6,13 +6,13 @@ function ProductCard({ product }) {
   const { addToCart } = useCart()
 
   return (
-    <article className="group overflow-hidden rounded-2xl border border-slate-200 bg-white p-4 transition hover:-translate-y-1 hover:shadow-lg">
+    <article className="group overflow-hidden rainbow-matte-panel group overflow-hidden rounded-2xl p-4 transition hover:-translate-y-1 hover:shadow-xl">
       <Link
         to={`/product/${product.id}`}
         aria-label={`View details for ${product.title}`}
         className="block"
       >
-        <div className="flex h-52 items-center justify-center rounded-xl bg-slate-50 p-4">
+        <div className="flex h-52 items-center justify-center rounded-xl bg-gradient-to-br from-blue-50 via-indigo-50 to-violet-50 p-4">
           <img
             src={product.image}
             alt={product.title}
@@ -43,7 +43,7 @@ function ProductCard({ product }) {
       <button
         type="button"
         onClick={() => addToCart(product)}
-        className="mt-4 w-full rounded-xl bg-indigo-600 px-4 py-3 font-medium text-white transition hover:bg-indigo-700"
+        className="mt-4 w-full rounded-xl rainbow-matte-button px-4 py-3 font-medium text-white"
       >
         Add to Cart
       </button>
