@@ -6,7 +6,7 @@ function ProductCard({ product }) {
   const { addToCart } = useCart()
 
   return (
-    <article className="group overflow-hidden rainbow-matte-panel group overflow-hidden rounded-2xl p-4 transition hover:-translate-y-1 hover:shadow-xl">
+    <article className="group overflow-hidden rainbow-matte-panel overflow-hidden rounded-2xl p-4 transition hover:-translate-y-1 hover:shadow-xl">
       <Link
         to={`/product/${product.id}`}
         aria-label={`View details for ${product.title}`}
