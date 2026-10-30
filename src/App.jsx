@@ -6,9 +6,9 @@ import Cart from './pages/Cart'
 import ProductDetails from './pages/ProductDetails'
 import Checkout from './pages/Checkout'
 import OrderConfirmation from './pages/OrderConfirmation'
+import Wishlist from './pages/Wishlist'
 
 function App() {
-  // Load the saved theme so the visitor keeps the same appearance after refresh.
   const [theme, setTheme] = useState(() => {
     try {
       return localStorage.getItem('shopease-theme') || 'light'
@@ -17,21 +17,17 @@ function App() {
     }
   })
 
-  // Apply the theme to the document and save the visitor's choice.
   useEffect(() => {
     document.documentElement.dataset.theme = theme
-
     try {
       localStorage.setItem('shopease-theme', theme)
     } catch {
-      // The theme still works for this visit if browser storage is unavailable.
+      // The selected theme still works until the page is closed.
     }
   }, [theme])
 
   function handleThemeToggle() {
-    setTheme((currentTheme) => (
-      currentTheme === 'light' ? 'dark' : 'light'
-    ))
+    setTheme((currentTheme) => currentTheme === 'light' ? 'dark' : 'light')
   }
 
   return (
@@ -40,6 +36,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/order-confirmation" element={<OrderConfirmation />} />
@@ -47,5 +44,4 @@ function App() {
     </div>
   )
 }
-
 export default App
