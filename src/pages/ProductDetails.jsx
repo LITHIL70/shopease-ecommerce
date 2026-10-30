@@ -89,7 +89,7 @@ function ProductDetails() {
         Back to Products
       </Link>
 
-      <section className="mt-6 grid gap-10 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm md:grid-cols-2 md:p-10">
+      <section className="mt-6 grid gap-10 rainbow-matte-panel rounded-3xl p-6 md:grid-cols-2 md:p-10">
         {/* Product image */}
         <div className="flex min-h-80 items-center justify-center rounded-2xl bg-slate-50 p-8">
           <img
