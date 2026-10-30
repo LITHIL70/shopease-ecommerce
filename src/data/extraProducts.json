@@ -1,0 +1,29 @@
+[
+  {
+    "id": 101,
+    "title": "Everyday Canvas Backpack",
+    "price": 34.99,
+    "category": "accessories",
+    "description": "A simple and useful backpack for everyday essentials.",
+    "image": "https://placehold.co/500x500?text=Canvas+Backpack",
+    "rating": { "rate": 4.6, "count": 28 }
+  },
+  {
+    "id": 102,
+    "title": "Minimal Desk Lamp",
+    "price": 24.5,
+    "category": "home",
+    "description": "A clean, minimal desk lamp for your study or workspace.",
+    "image": "https://placehold.co/500x500?text=Desk+Lamp",
+    "rating": { "rate": 4.3, "count": 19 }
+  },
+  {
+    "id": 103,
+    "title": "Classic Everyday Watch",
+    "price": 49.99,
+    "category": "accessories",
+    "description": "A classic everyday watch with a simple, versatile design.",
+    "image": "https://placehold.co/500x500?text=Classic+Watch",
+    "rating": { "rate": 4.5, "count": 32 }
+  }
+]
