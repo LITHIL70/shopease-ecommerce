@@ -8,24 +8,35 @@ import Checkout from './pages/Checkout'
 import OrderConfirmation from './pages/OrderConfirmation'
 
 function App() {
-  // Remember the visitor's theme choice between page refreshes.
+  // Load the saved theme so the visitor keeps the same appearance after refresh.
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('shopease-theme') || 'light'
+    try {
+      return localStorage.getItem('shopease-theme') || 'light'
+    } catch {
+      return 'light'
+    }
   })
 
+  // Apply the theme to the document and save the visitor's choice.
   useEffect(() => {
-    localStorage.setItem('shopease-theme', theme)
+    document.documentElement.dataset.theme = theme
+
+    try {
+      localStorage.setItem('shopease-theme', theme)
+    } catch {
+      // The theme still works for this visit if browser storage is unavailable.
+    }
   }, [theme])
 
-  function toggleTheme() {
+  function handleThemeToggle() {
     setTheme((currentTheme) => (
       currentTheme === 'light' ? 'dark' : 'light'
     ))
   }
 
   return (
-    <div data-theme={theme} className="rainbow-matte-background min-h-screen text-slate-900">
-      <Navbar theme={theme} onToggleTheme={toggleTheme} />
+    <div data-theme={theme} className="rainbow-matte-background min-h-screen">
+      <Navbar theme={theme} onToggleTheme={handleThemeToggle} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
