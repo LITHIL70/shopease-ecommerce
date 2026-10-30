@@ -11,7 +11,7 @@ function Cart() {
         <Link to="/" className="font-medium text-indigo-600 hover:text-indigo-800">Continue Shopping</Link>
       </div>
       {cart.length === 0 ? (
-        <div className="rounded-2xl bg-white p-10 text-center shadow-sm">
+        <div className="rainbow-matte-panel rounded-2xl p-10 text-center">
           <p className="text-xl font-semibold text-slate-800">Your cart is empty</p>
           <p className="mt-2 text-slate-500">Find something you love and add it to your cart.</p>
           <Link to="/" className="mt-6 inline-block rounded-xl bg-indigo-600 px-6 py-3 font-medium text-white hover:bg-indigo-700">Explore Products</Link>
@@ -20,7 +20,7 @@ function Cart() {
         <div className="grid gap-8 md:grid-cols-3">
           <section className="space-y-4 md:col-span-2">
             {cart.map((item) => (
-              <article key={item.id} className="flex flex-col gap-4 rounded-2xl border border-slate-200 bg-white p-4 sm:flex-row sm:items-center">
+              <article key={item.id} className="flex flex-col gap-4 rainbow-matte-panel rounded-2xl p-4 sm:flex-row sm:items-center">
                 <img src={item.image} alt={item.title} className="h-28 w-full rounded-xl bg-slate-50 object-contain p-3 sm:w-28" />
                 <div className="min-w-0 flex-1">
                   <h2 className="font-semibold text-slate-800">{item.title}</h2>
@@ -39,7 +39,7 @@ function Cart() {
             ))}
             <button type="button" onClick={clearCart} className="text-sm font-medium text-red-600 hover:text-red-800">Clear Cart</button>
           </section>
-          <aside className="h-fit rounded-2xl border border-slate-200 bg-white p-6">
+          <aside className="rainbow-matte-panel h-fit rounded-2xl p-6">
             <h2 className="text-xl font-bold">Order Summary</h2>
             <div className="mt-5 flex justify-between text-slate-600"><span>Subtotal</span><span>${cartTotal.toFixed(2)}</span></div>
             <div className="mt-3 flex justify-between text-slate-600"><span>Shipping</span><span>Free</span></div>
