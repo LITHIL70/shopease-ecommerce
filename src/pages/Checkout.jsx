@@ -7,6 +7,9 @@ function Checkout() {
   const navigate = useNavigate()
   const [form, setForm] = useState({ fullName: '', email: '', phone: '', address: '', city: '', state: '', postalCode: '' })
   const [error, setError] = useState('')
+  const [paymentOpen, setPaymentOpen] = useState(false)
+  const [paymentMethod, setPaymentMethod] = useState('upi')
+  const [paymentStatus, setPaymentStatus] = useState('idle')
 
   function handleChange(event) {
     const { name, value } = event.target
@@ -17,41 +20,43 @@ function Checkout() {
   function handleSubmit(event) {
     event.preventDefault()
     setError('')
-    if (!cart.length) {
-      setError('Your cart is empty. Add products before checkout.')
-      return
-    }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
-      setError('Please enter a valid email address.')
-      return
-    }
-    const digits = form.phone.replace(/\D/g, '')
-    if (digits.length < 10 || digits.length > 15) {
-      setError('Enter a phone number with 10 to 15 digits.')
-      return
-    }
-    if (!/^[a-zA-Z0-9 -]{4,10}$/.test(form.postalCode.trim())) {
-      setError('Enter a valid postal or ZIP code (4–10 characters).')
-      return
-    }
-    const order = {
-      orderNumber: `SE-${Date.now().toString().slice(-8)}`,
-      customer: form,
-      items: cart,
-      itemCount: cartCount,
-      subtotal: cartTotal,
-      shipping: 0,
-      total: cartTotal,
-      createdAt: new Date().toISOString(),
-    }
-    try {
-      localStorage.setItem('shopease-last-order', JSON.stringify(order))
-    } catch {
-      setError('Could not save your demo order. Check your browser storage.')
-      return
-    }
-    clearCart()
-    navigate('/order-confirmation')
+    if (!cart.length) return setError('Your cart is empty. Add products before checkout.')
+    if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(form.email)) return setError('Please enter a valid email address.')
+    const digits = form.phone.replace(/\\D/g, '')
+    if (digits.length < 10 || digits.length > 15) return setError('Enter a phone number with 10 to 15 digits.')
+    if (!/^[a-zA-Z0-9 -]{4,10}$/.test(form.postalCode.trim())) return setError('Enter a valid postal or ZIP code (4–10 characters).')
+    setPaymentOpen(true)
+  }
+
+  function simulatePayment() {
+    if (paymentStatus === 'processing') return
+    setPaymentStatus('processing')
+    window.setTimeout(() => {
+      const order = {
+        orderNumber: `SE-${Date.now().toString().slice(-8)}`,
+        paymentId: `pay_demo_${Math.random().toString(36).slice(2, 10)}`,
+        paymentMethod,
+        paymentStatus: 'SIMULATED_SUCCESS',
+        customer: form,
+        items: cart,
+        itemCount: cartCount,
+        subtotal: cartTotal,
+        shipping: 0,
+        total: cartTotal,
+        createdAt: new Date().toISOString(),
+        demo: true,
+      }
+      try {
+        localStorage.setItem('shopease-last-order', JSON.stringify(order))
+        clearCart()
+        setPaymentStatus('success')
+        window.setTimeout(() => navigate('/order-confirmation'), 1100)
+      } catch {
+        setPaymentStatus('idle')
+        setError('Could not save your demo order. Check your browser storage.')
+        setPaymentOpen(false)
+      }
+    }, 2200)
   }
 
   const inputClass = 'mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100'
@@ -70,7 +75,7 @@ function Checkout() {
     <main className="mx-auto max-w-6xl px-5 py-10">
       <Link to="/cart" className="font-medium text-indigo-600 hover:text-indigo-800">← Back to Cart</Link>
       <h1 className="mt-5 text-3xl font-extrabold">Checkout</h1>
-      <p className="mt-2 text-slate-500">Enter your shipping details to place a demo order.</p>
+      <p className="mt-2 text-slate-500">Enter your shipping details and continue to the demo payment screen.</p>
       <div className="mt-8 grid items-start gap-8 lg:grid-cols-3">
         <form onSubmit={handleSubmit} className="rainbow-matte-panel space-y-6 rounded-2xl p-6 lg:col-span-2">
           <section>
@@ -100,8 +105,8 @@ function Checkout() {
             </div>
           </section>
           {error && <p role="alert" className="rounded-xl bg-red-50 p-4 text-sm text-red-700">{error}</p>}
-          <button type="submit" className="w-full rounded-xl bg-indigo-600 px-6 py-4 font-semibold text-white transition hover:bg-indigo-700">Place Demo Order</button>
-          <p className="text-center text-xs text-slate-500">Demo only. No payment details are requested or processed.</p>
+          <button type="submit" className="w-full rounded-xl bg-indigo-600 px-6 py-4 font-semibold text-white transition hover:bg-indigo-700">Continue to Demo Payment · ${cartTotal.toFixed(2)}</button>
+          <p className="text-center text-xs text-slate-500">Demo checkout only. No real payment details or money are processed.</p>
         </form>
         <aside className="rainbow-matte-panel h-fit rounded-2xl p-6 lg:sticky lg:top-24">
           <h2 className="text-xl font-bold">Order Summary</h2>
@@ -109,10 +114,7 @@ function Checkout() {
             {cart.map((item) => (
               <div key={item.id} className="flex gap-3">
                 <img src={item.image} alt="" className="h-14 w-14 rounded-lg bg-slate-50 object-contain p-1" />
-                <div className="min-w-0 flex-1">
-                  <p className="line-clamp-2 text-sm font-medium text-slate-800">{item.title}</p>
-                  <p className="mt-1 text-sm text-slate-500">Qty: {item.quantity}</p>
-                </div>
+                <div className="min-w-0 flex-1"><p className="line-clamp-2 text-sm font-medium text-slate-800">{item.title}</p><p className="mt-1 text-sm text-slate-500">Qty: {item.quantity}</p></div>
                 <p className="text-sm font-semibold">${(item.price * item.quantity).toFixed(2)}</p>
               </div>
             ))}
@@ -124,6 +126,50 @@ function Checkout() {
           <div className="flex justify-between gap-3 text-lg font-bold"><span>Total</span><span>${cartTotal.toFixed(2)}</span></div>
         </aside>
       </div>
+
+      {paymentOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 p-4" role="dialog" aria-modal="true" aria-labelledby="payment-title">
+          <div className="w-full max-w-md overflow-hidden rounded-2xl bg-white shadow-2xl">
+            <div className="bg-[#172b55] px-6 py-5 text-white">
+              <div className="flex items-center justify-between"><span className="text-lg font-bold tracking-wide">Razorpay-style checkout</span><span className="rounded bg-white/15 px-2 py-1 text-xs">DEMO</span></div>
+              <p className="mt-3 text-sm text-blue-100">ShopEase · Test payment experience</p>
+              <p className="mt-1 text-2xl font-bold">₹{(cartTotal * 83).toFixed(2)}</p>
+            </div>
+            <div className="p-6">
+              {paymentStatus === 'success' ? (
+                <div className="py-8 text-center">
+                  <div className="mx-auto flex h-20 w-20 animate-[pop_0.35s_ease-out] items-center justify-center rounded-full bg-green-100 text-5xl text-green-600">✓</div>
+                  <h2 className="mt-5 text-2xl font-bold text-slate-900">Payment successful!</h2>
+                  <p className="mt-2 text-sm text-slate-500">Demo transaction completed. Redirecting to your order…</p>
+                </div>
+              ) : paymentStatus === 'processing' ? (
+                <div className="py-10 text-center">
+                  <div className="mx-auto h-14 w-14 animate-spin rounded-full border-4 border-slate-200 border-t-indigo-600" />
+                  <h2 className="mt-5 text-xl font-bold">Processing payment</h2>
+                  <p className="mt-2 text-sm text-slate-500">Please wait while we simulate a secure transaction…</p>
+                  <div className="mx-auto mt-5 h-1.5 max-w-xs overflow-hidden rounded-full bg-slate-100"><div className="h-full w-full origin-left animate-[progress_2.2s_linear] rounded-full bg-indigo-600" /></div>
+                </div>
+              ) : (
+                <>
+                  <h2 id="payment-title" className="text-lg font-bold text-slate-900">Choose payment method</h2>
+                  <div className="mt-4 space-y-3">
+                    {[['upi','UPI','GPay · PhonePe · Paytm'],['card','Cards','Credit or debit card (demo)'],['netbanking','Netbanking','All major banks (demo)']].map(([value,label,sub]) => (
+                      <label key={value} className={`flex cursor-pointer items-center gap-3 rounded-xl border p-4 ${paymentMethod === value ? 'border-indigo-600 bg-indigo-50' : 'border-slate-200'}`}>
+                        <input type="radio" name="paymentMethod" value={value} checked={paymentMethod === value} onChange={() => setPaymentMethod(value)} />
+                        <span><span className="block font-semibold text-slate-800">{label}</span><span className="text-xs text-slate-500">{sub}</span></span>
+                      </label>
+                    ))}
+                  </div>
+                  <p className="mt-4 rounded-lg bg-amber-50 p-3 text-xs leading-5 text-amber-800">Simulation only: this is not connected to Razorpay. Do not enter card, UPI, or banking credentials. No real transaction will occur.</p>
+                  <button onClick={simulatePayment} className="mt-5 w-full rounded-xl bg-[#2563eb] px-5 py-3.5 font-semibold text-white hover:bg-blue-700">Simulate payment · ₹{(cartTotal * 83).toFixed(2)}</button>
+                  <button onClick={() => setPaymentOpen(false)} className="mt-3 w-full rounded-xl px-5 py-2.5 text-sm font-semibold text-slate-500 hover:bg-slate-100">Cancel</button>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+      <style>{`@keyframes progress { from { transform: scaleX(0); } to { transform: scaleX(1); } } @keyframes pop { 0% { transform: scale(.4); opacity: 0; } 80% { transform: scale(1.12); } 100% { transform: scale(1); opacity: 1; } }`}</style>
     </main>
   )
 }
