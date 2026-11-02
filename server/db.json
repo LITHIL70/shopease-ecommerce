@@ -1,1 +1,654 @@
-{"products":[{"id":1,"title":"Apple iPhone 15","price":699.99,"category":"mobiles","description":"Apple iPhone 15 smartphone with modern performance, a capable camera and all-day battery life.","image":"https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=700&q=85","brand":"Apple","stock":25,"rating":{"rate":4.4,"count":42}},{"id":2,"title":"Samsung Galaxy S24","price":749.99,"category":"mobiles","description":"Samsung Galaxy S24 smartphone with modern performance, a capable camera and all-day battery life.","image":"https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?auto=format&fit=crop&w=700&q=85","brand":"Samsung","stock":25,"rating":{"rate":4.4,"count":42}},{"id":3,"title":"Google Pixel 8","price":599.99,"category":"mobiles","description":"Google Pixel 8 smartphone with modern performance, a capable camera and all-day battery life.","image":"https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=700&q=85","brand":"Google","stock":25,"rating":{"rate":4.4,"count":42}},{"id":4,"title":"OnePlus 12R","price":499.99,"category":"mobiles","description":"OnePlus 12R smartphone with modern performance, a capable camera and all-day battery life.","image":"https://images.unsplash.com/photo-1511707267537-b85faf0009a4?auto=format&fit=crop&w=700&q=85","brand":"OnePlus","stock":25,"rating":{"rate":4.4,"count":42}},{"id":5,"title":"Motorola Edge 50","price":399.99,"category":"mobiles","description":"Motorola Edge 50 smartphone with modern performance, a capable camera and all-day battery life.","image":"https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=85","brand":"Motorola","stock":25,"rating":{"rate":4.4,"count":42}},{"id":6,"title":"Apple MacBook Air 13","price":1099,"category":"laptops","description":"Apple MacBook Air 13 laptop for work, study and everyday productivity.","image":"https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=700&q=85","brand":"Apple","stock":25,"rating":{"rate":4.4,"count":42}},{"id":7,"title":"Dell Inspiron 15","price":749,"category":"laptops","description":"Dell Inspiron 15 laptop for work, study and everyday productivity.","image":"https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=85","brand":"Dell","stock":25,"rating":{"rate":4.4,"count":42}},{"id":8,"title":"HP Pavilion 14","price":699,"category":"laptops","description":"HP Pavilion 14 laptop for work, study and everyday productivity.","image":"https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=700&q=85","brand":"HP","stock":25,"rating":{"rate":4.4,"count":42}},{"id":9,"title":"Lenovo IdeaPad Slim 5","price":799,"category":"laptops","description":"Lenovo IdeaPad Slim 5 laptop for work, study and everyday productivity.","image":"https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=700&q=85","brand":"Lenovo","stock":25,"rating":{"rate":4.4,"count":42}},{"id":10,"title":"ASUS Vivobook 15","price":649,"category":"laptops","description":"ASUS Vivobook 15 laptop for work, study and everyday productivity.","image":"https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=85","brand":"ASUS","stock":25,"rating":{"rate":4.4,"count":42}},{"id":11,"title":"Logitech M185 Wireless Mouse","price":19.99,"category":"mouses","description":"Logitech M185 Wireless Mouse, designed for comfortable everyday computer use.","image":"https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=700&q=85","brand":"","stock":25,"rating":{"rate":4.4,"count":42}},{"id":12,"title":"Logitech MX Master 3S","price":99.99,"category":"mouses","description":"Logitech MX Master 3S, designed for comfortable everyday computer use.","image":"https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=700&q=85","brand":"","stock":25,"rating":{"rate":4.4,"count":42}},{"id":13,"title":"Razer DeathAdder Essential","price":29.99,"category":"mouses","description":"Razer DeathAdder Essential, designed for comfortable everyday computer use.","image":"https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=700&q=85","brand":"","stock":25,"rating":{"rate":4.4,"count":42}},{"id":14,"title":"Dell MS3320W Wireless Mouse","price":34.99,"category":"mouses","description":"Dell MS3320W Wireless Mouse, designed for comfortable everyday computer use.","image":"https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=700&q=85","brand":"","stock":25,"rating":{"rate":4.4,"count":42}},{"id":15,"title":"Men Classic Crew Neck T-Shirt","price":19.99,"category":"men-clothing","description":"Men Classic Crew Neck T-Shirt, comfortable style for daily wear.","image":"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":16,"title":"Men Slim Fit Jeans","price":44.99,"category":"men-clothing","description":"Men Slim Fit Jeans, comfortable style for daily wear.","image":"https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":17,"title":"Men Casual Oxford Shirt","price":39.99,"category":"men-clothing","description":"Men Casual Oxford Shirt, comfortable style for daily wear.","image":"https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":18,"title":"Men Lightweight Hoodie","price":34.99,"category":"men-clothing","description":"Men Lightweight Hoodie, comfortable style for daily wear.","image":"https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":19,"title":"Men Chino Trousers","price":42.99,"category":"men-clothing","description":"Men Chino Trousers, comfortable style for daily wear.","image":"https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":20,"title":"Men Running Shorts","price":22.99,"category":"men-clothing","description":"Men Running Shorts, comfortable style for daily wear.","image":"https://images.unsplash.com/photo-148998102958-0b1c9e7c9e4a?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":21,"title":"Men Cotton Polo Shirt","price":27.99,"category":"men-clothing","description":"Men Cotton Polo Shirt, comfortable style for daily wear.","image":"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":22,"title":"Men Denim Jacket","price":59.99,"category":"men-clothing","description":"Men Denim Jacket, comfortable style for daily wear.","image":"https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":23,"title":"Men Formal Dress Shirt","price":49.99,"category":"men-clothing","description":"Men Formal Dress Shirt, comfortable style for daily wear.","image":"https://images.unsplash.com/photo-1520975958225-35f9c6e4e7b0?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":24,"title":"Men Jogger Pants","price":32.99,"category":"men-clothing","description":"Men Jogger Pants, comfortable style for daily wear.","image":"https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":25,"title":"Women Floral Summer Dress","price":49.99,"category":"women-clothing","description":"Women Floral Summer Dress, versatile clothing for everyday outfits.","image":"https://images.unsplash.com/photo-1529139574466-a303027c1d8?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":26,"title":"Women High-Rise Jeans","price":46.99,"category":"women-clothing","description":"Women High-Rise Jeans, versatile clothing for everyday outfits.","image":"https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":27,"title":"Women Relaxed Fit T-Shirt","price":18.99,"category":"women-clothing","description":"Women Relaxed Fit T-Shirt, versatile clothing for everyday outfits.","image":"https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":28,"title":"Women Knit Cardigan","price":39.99,"category":"women-clothing","description":"Women Knit Cardigan, versatile clothing for everyday outfits.","image":"https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":29,"title":"Women Wide-Leg Trousers","price":44.99,"category":"women-clothing","description":"Women Wide-Leg Trousers, versatile clothing for everyday outfits.","image":"https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":30,"title":"Women Active Leggings","price":29.99,"category":"women-clothing","description":"Women Active Leggings, versatile clothing for everyday outfits.","image":"https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":31,"title":"Women Satin Blouse","price":36.99,"category":"women-clothing","description":"Women Satin Blouse, versatile clothing for everyday outfits.","image":"https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":32,"title":"Women Denim Jacket","price":58.99,"category":"women-clothing","description":"Women Denim Jacket, versatile clothing for everyday outfits.","image":"https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":33,"title":"Women Midi Skirt","price":34.99,"category":"women-clothing","description":"Women Midi Skirt, versatile clothing for everyday outfits.","image":"https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":34,"title":"Women Casual Hoodie","price":33.99,"category":"women-clothing","description":"Women Casual Hoodie, versatile clothing for everyday outfits.","image":"https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":35,"title":"Canvas Backpack","price":34.99,"category":"accessories","description":"Canvas Backpack for your everyday needs.","image":"https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":36,"title":"Minimal Desk Lamp","price":24.5,"category":"home","description":"Minimal Desk Lamp for your everyday needs.","image":"https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":37,"title":"Classic Everyday Watch","price":49.99,"category":"accessories","description":"Classic Everyday Watch for your everyday needs.","image":"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":38,"title":"Stainless Steel Water Bottle","price":16.99,"category":"home","description":"Stainless Steel Water Bottle for your everyday needs.","image":"https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":39,"title":"Wireless Bluetooth Speaker","price":45.99,"category":"electronics","description":"Wireless Bluetooth Speaker for your everyday needs.","image":"https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":40,"title":"Noise Cancelling Headphones","price":89.99,"category":"electronics","description":"Noise Cancelling Headphones for your everyday needs.","image":"https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":41,"title":"Portable USB-C Hub","price":29.99,"category":"electronics","description":"Portable USB-C Hub for your everyday needs.","image":"https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":42,"title":"Ceramic Coffee Mug Set","price":21.99,"category":"home","description":"Ceramic Coffee Mug Set for your everyday needs.","image":"https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":43,"title":"LED Monitor Light Bar","price":39.99,"category":"home","description":"LED Monitor Light Bar for your everyday needs.","image":"https://images.unsplash.com/photo-1585386959984-a4155224a1ad?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}},{"id":44,"title":"Travel Organizer Pouch","price":14.99,"category":"accessories","description":"Travel Organizer Pouch for your everyday needs.","image":"https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=700&q=85","brand":"ShopEase","stock":25,"rating":{"rate":4.4,"count":42}}],"categories":[{"id":1,"name":"mobiles"},{"id":2,"name":"laptops"},{"id":3,"name":"mouses"},{"id":4,"name":"men-clothing"},{"id":5,"name":"women-clothing"},{"id":6,"name":"accessories"},{"id":7,"name":"home"},{"id":8,"name":"electronics"}]}
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Apple iPhone 15",
+      "price": 699.99,
+      "category": "mobiles",
+      "description": "Apple iPhone 15 smartphone with modern performance, a capable camera and all-day battery life.",
+      "image": "https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/1.webp",
+      "brand": "Apple",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 2,
+      "title": "Samsung Galaxy S24",
+      "price": 749.99,
+      "category": "mobiles",
+      "description": "Samsung Galaxy S24 smartphone with modern performance, a capable camera and all-day battery life.",
+      "image": "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/1.webp",
+      "brand": "Samsung",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 3,
+      "title": "Google Pixel 8",
+      "price": 599.99,
+      "category": "mobiles",
+      "description": "Google Pixel 8 smartphone with modern performance, a capable camera and all-day battery life.",
+      "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=700&q=85",
+      "brand": "Google",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 4,
+      "title": "OnePlus 12R",
+      "price": 499.99,
+      "category": "mobiles",
+      "description": "OnePlus 12R smartphone with modern performance, a capable camera and all-day battery life.",
+      "image": "https://images.unsplash.com/photo-1511707267537-b85faf0009a4?auto=format&fit=crop&w=700&q=85",
+      "brand": "OnePlus",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 5,
+      "title": "Motorola Edge 50",
+      "price": 399.99,
+      "category": "mobiles",
+      "description": "Motorola Edge 50 smartphone with modern performance, a capable camera and all-day battery life.",
+      "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=85",
+      "brand": "Motorola",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 6,
+      "title": "Apple MacBook Air 13",
+      "price": 1099,
+      "category": "laptops",
+      "description": "Apple MacBook Air 13 laptop for work, study and everyday productivity.",
+      "image": "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/1.webp",
+      "brand": "Apple",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 7,
+      "title": "Dell Inspiron 15",
+      "price": 749,
+      "category": "laptops",
+      "description": "Dell Inspiron 15 laptop for work, study and everyday productivity.",
+      "image": "https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/1.webp",
+      "brand": "Dell",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 8,
+      "title": "HP Pavilion 14",
+      "price": 699,
+      "category": "laptops",
+      "description": "HP Pavilion 14 laptop for work, study and everyday productivity.",
+      "image": "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/1.webp",
+      "brand": "HP",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 9,
+      "title": "Lenovo IdeaPad Slim 5",
+      "price": 799,
+      "category": "laptops",
+      "description": "Lenovo IdeaPad Slim 5 laptop for work, study and everyday productivity.",
+      "image": "https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/1.webp",
+      "brand": "Lenovo",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 10,
+      "title": "ASUS Vivobook 15",
+      "price": 649,
+      "category": "laptops",
+      "description": "ASUS Vivobook 15 laptop for work, study and everyday productivity.",
+      "image": "https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/1.webp",
+      "brand": "ASUS",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 11,
+      "title": "Logitech M185 Wireless Mouse",
+      "price": 19.99,
+      "category": "mouses",
+      "description": "Logitech M185 Wireless Mouse, designed for comfortable everyday computer use.",
+      "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=700&q=85",
+      "brand": "",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 12,
+      "title": "Logitech MX Master 3S",
+      "price": 99.99,
+      "category": "mouses",
+      "description": "Logitech MX Master 3S, designed for comfortable everyday computer use.",
+      "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=700&q=85",
+      "brand": "",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 13,
+      "title": "Razer DeathAdder Essential",
+      "price": 29.99,
+      "category": "mouses",
+      "description": "Razer DeathAdder Essential, designed for comfortable everyday computer use.",
+      "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=700&q=85",
+      "brand": "",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 14,
+      "title": "Dell MS3320W Wireless Mouse",
+      "price": 34.99,
+      "category": "mouses",
+      "description": "Dell MS3320W Wireless Mouse, designed for comfortable everyday computer use.",
+      "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=700&q=85",
+      "brand": "",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 15,
+      "title": "Men Classic Crew Neck T-Shirt",
+      "price": 19.99,
+      "category": "men-clothing",
+      "description": "Men Classic Crew Neck T-Shirt, comfortable style for daily wear.",
+      "image": "https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/1.webp",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 16,
+      "title": "Men Slim Fit Jeans",
+      "price": 44.99,
+      "category": "men-clothing",
+      "description": "Men Slim Fit Jeans, comfortable style for daily wear.",
+      "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=700&q=85",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 17,
+      "title": "Men Casual Oxford Shirt",
+      "price": 39.99,
+      "category": "men-clothing",
+      "description": "Men Casual Oxford Shirt, comfortable style for daily wear.",
+      "image": "https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/1.webp",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 18,
+      "title": "Men Lightweight Hoodie",
+      "price": 34.99,
+      "category": "men-clothing",
+      "description": "Men Lightweight Hoodie, comfortable style for daily wear.",
+      "image": "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=700&q=85",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 19,
+      "title": "Men Chino Trousers",
+      "price": 42.99,
+      "category": "men-clothing",
+      "description": "Men Chino Trousers, comfortable style for daily wear.",
+      "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=700&q=85",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 20,
+      "title": "Men Running Shorts",
+      "price": 22.99,
+      "category": "men-clothing",
+      "description": "Men Running Shorts, comfortable style for daily wear.",
+      "image": "https://images.unsplash.com/photo-148998102958-0b1c9e7c9e4a?auto=format&fit=crop&w=700&q=85",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 21,
+      "title": "Men Cotton Polo Shirt",
+      "price": 27.99,
+      "category": "men-clothing",
+      "description": "Men Cotton Polo Shirt, comfortable style for daily wear.",
+      "image": "https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/1.webp",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 22,
+      "title": "Men Denim Jacket",
+      "price": 59.99,
+      "category": "men-clothing",
+      "description": "Men Denim Jacket, comfortable style for daily wear.",
+      "image": "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=700&q=85",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 23,
+      "title": "Men Formal Dress Shirt",
+      "price": 49.99,
+      "category": "men-clothing",
+      "description": "Men Formal Dress Shirt, comfortable style for daily wear.",
+      "image": "https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/1.webp",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 24,
+      "title": "Men Jogger Pants",
+      "price": 32.99,
+      "category": "men-clothing",
+      "description": "Men Jogger Pants, comfortable style for daily wear.",
+      "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=85",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 25,
+      "title": "Women Floral Summer Dress",
+      "price": 49.99,
+      "category": "women-clothing",
+      "description": "Women Floral Summer Dress, versatile clothing for everyday outfits.",
+      "image": "https://cdn.dummyjson.com/product-images/tops/girl-summer-dress/1.webp",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 26,
+      "title": "Women High-Rise Jeans",
+      "price": 46.99,
+      "category": "women-clothing",
+      "description": "Women High-Rise Jeans, versatile clothing for everyday outfits.",
+      "image": "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=700&q=85",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 27,
+      "title": "Women Relaxed Fit T-Shirt",
+      "price": 18.99,
+      "category": "women-clothing",
+      "description": "Women Relaxed Fit T-Shirt, versatile clothing for everyday outfits.",
+      "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=700&q=85",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 28,
+      "title": "Women Knit Cardigan",
+      "price": 39.99,
+      "category": "women-clothing",
+      "description": "Women Knit Cardigan, versatile clothing for everyday outfits.",
+      "image": "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=700&q=85",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 29,
+      "title": "Women Wide-Leg Trousers",
+      "price": 44.99,
+      "category": "women-clothing",
+      "description": "Women Wide-Leg Trousers, versatile clothing for everyday outfits.",
+      "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=85",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 30,
+      "title": "Women Active Leggings",
+      "price": 29.99,
+      "category": "women-clothing",
+      "description": "Women Active Leggings, versatile clothing for everyday outfits.",
+      "image": "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=700&q=85",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 31,
+      "title": "Women Satin Blouse",
+      "price": 36.99,
+      "category": "women-clothing",
+      "description": "Women Satin Blouse, versatile clothing for everyday outfits.",
+      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=85",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 32,
+      "title": "Women Denim Jacket",
+      "price": 58.99,
+      "category": "women-clothing",
+      "description": "Women Denim Jacket, versatile clothing for everyday outfits.",
+      "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=700&q=85",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 33,
+      "title": "Women Midi Skirt",
+      "price": 34.99,
+      "category": "women-clothing",
+      "description": "Women Midi Skirt, versatile clothing for everyday outfits.",
+      "image": "https://cdn.dummyjson.com/product-images/womens-dresses/corset-leather-with-skirt/1.webp",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 34,
+      "title": "Women Casual Hoodie",
+      "price": 33.99,
+      "category": "women-clothing",
+      "description": "Women Casual Hoodie, versatile clothing for everyday outfits.",
+      "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=700&q=85",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 35,
+      "title": "Canvas Backpack",
+      "price": 34.99,
+      "category": "accessories",
+      "description": "Canvas Backpack for your everyday needs.",
+      "image": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/1.webp",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 36,
+      "title": "Minimal Desk Lamp",
+      "price": 24.5,
+      "category": "home",
+      "description": "Minimal Desk Lamp for your everyday needs.",
+      "image": "https://cdn.dummyjson.com/product-images/home-decoration/table-lamp/1.webp",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 37,
+      "title": "Classic Everyday Watch",
+      "price": 49.99,
+      "category": "accessories",
+      "description": "Classic Everyday Watch for your everyday needs.",
+      "image": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/1.webp",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 38,
+      "title": "Stainless Steel Water Bottle",
+      "price": 16.99,
+      "category": "home",
+      "description": "Stainless Steel Water Bottle for your everyday needs.",
+      "image": "https://cdn.dummyjson.com/product-images/home-decoration/decoration-swing/1.webp",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 39,
+      "title": "Wireless Bluetooth Speaker",
+      "price": 45.99,
+      "category": "electronics",
+      "description": "Wireless Bluetooth Speaker for your everyday needs.",
+      "image": "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=700&q=85",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 40,
+      "title": "Noise Cancelling Headphones",
+      "price": 89.99,
+      "category": "electronics",
+      "description": "Noise Cancelling Headphones for your everyday needs.",
+      "image": "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?auto=format&fit=crop&w=700&q=85",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 41,
+      "title": "Portable USB-C Hub",
+      "price": 29.99,
+      "category": "electronics",
+      "description": "Portable USB-C Hub for your everyday needs.",
+      "image": "https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=700&q=85",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 42,
+      "title": "Ceramic Coffee Mug Set",
+      "price": 21.99,
+      "category": "home",
+      "description": "Ceramic Coffee Mug Set for your everyday needs.",
+      "image": "https://cdn.dummyjson.com/product-images/home-decoration/decoration-swing/1.webp",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 43,
+      "title": "LED Monitor Light Bar",
+      "price": 39.99,
+      "category": "home",
+      "description": "LED Monitor Light Bar for your everyday needs.",
+      "image": "https://cdn.dummyjson.com/product-images/home-decoration/decoration-swing/1.webp",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    },
+    {
+      "id": 44,
+      "title": "Travel Organizer Pouch",
+      "price": 14.99,
+      "category": "accessories",
+      "description": "Travel Organizer Pouch for your everyday needs.",
+      "image": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/1.webp",
+      "brand": "ShopEase",
+      "stock": 25,
+      "rating": {
+        "rate": 4.4,
+        "count": 42
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "mobiles"
+    },
+    {
+      "id": 2,
+      "name": "laptops"
+    },
+    {
+      "id": 3,
+      "name": "mouses"
+    },
+    {
+      "id": 4,
+      "name": "men-clothing"
+    },
+    {
+      "id": 5,
+      "name": "women-clothing"
+    },
+    {
+      "id": 6,
+      "name": "accessories"
+    },
+    {
+      "id": 7,
+      "name": "home"
+    },
+    {
+      "id": 8,
+      "name": "electronics"
+    }
+  ]
+}
