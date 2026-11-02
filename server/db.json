@@ -323,20 +323,6 @@
       }
     },
     {
-      "id": 24,
-      "title": "Men Jogger Pants",
-      "price": 32.99,
-      "category": "men-clothing",
-      "description": "Men Jogger Pants, comfortable style for daily wear.",
-      "image": "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?auto=format&fit=crop&w=700&q=85",
-      "brand": "ShopEase",
-      "stock": 25,
-      "rating": {
-        "rate": 4.4,
-        "count": 42
-      }
-    },
-    {
       "id": 25,
       "title": "Women Floral Summer Dress",
       "price": 49.99,
@@ -581,20 +567,6 @@
       "category": "home",
       "description": "Ceramic Coffee Mug Set for your everyday needs.",
       "image": "https://cdn.dummyjson.com/product-images/kitchen-accessories/black-aluminium-cup/1.webp",
-      "brand": "ShopEase",
-      "stock": 25,
-      "rating": {
-        "rate": 4.4,
-        "count": 42
-      }
-    },
-    {
-      "id": 43,
-      "title": "LED Monitor Light Bar",
-      "price": 39.99,
-      "category": "home",
-      "description": "LED Monitor Light Bar for your everyday needs.",
-      "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=700&q=85",
       "brand": "ShopEase",
       "stock": 25,
       "rating": {
