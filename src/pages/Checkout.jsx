@@ -216,7 +216,7 @@ function Checkout() {
                   </div>
                   <p className="mt-4 rounded-lg bg-amber-50 p-3 text-xs leading-5 text-amber-800">{paymentMethod === 'razorpay' ? 'Razorpay Test Mode: use test credentials only. No real money will be charged.' : 'Simulation only: this is not connected to Razorpay. Do not enter card, UPI, or banking credentials. No real transaction will occur.'}</p>
                   {razorpayError && <p role="alert" className="mt-3 rounded-lg bg-red-50 p-3 text-xs text-red-700">{razorpayError}</p>}
-                  {paymentMethod === 'razorpay' ? <button onClick={payWithRazorpay} className="mt-5 w-full rounded-xl bg-[#2563eb] px-5 py-3.5 font-semibold text-white hover:bg-blue-700">Pay with Razorpay · ₹{(cartTotal * 83).toFixed(2)}</button> : <button onClick={simulatePayment} className="mt-5 w-full rounded-xl bg-[#2563eb] px-5 py-3.5 font-semibold text-white hover:bg-blue-700">Simulate payment · ₹{(cartTotal * 83).toFixed(2)}</button>
+                  {paymentMethod === 'razorpay' ? <button onClick={payWithRazorpay} className="mt-5 w-full rounded-xl bg-[#2563eb] px-5 py-3.5 font-semibold text-white hover:bg-blue-700">Pay with Razorpay · ₹{(cartTotal * 83).toFixed(2)}</button> : <button onClick={simulatePayment} className="mt-5 w-full rounded-xl bg-[#2563eb] px-5 py-3.5 font-semibold text-white hover:bg-blue-700">Simulate payment · ₹{(cartTotal * 83).toFixed(2)}</button>}
                   <button onClick={() => setPaymentOpen(false)} className="mt-3 w-full rounded-xl px-5 py-2.5 text-sm font-semibold text-slate-500 hover:bg-slate-100">Cancel</button>
                 </>
               )}
