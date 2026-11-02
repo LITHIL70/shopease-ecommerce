@@ -8,7 +8,8 @@
     "server": "json-server --watch server/db.json --host 0.0.0.0 --port 5000",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "payment-server": "node server/razorpay.js"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
@@ -16,7 +17,11 @@
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-router-dom": "^7.18.4",
-    "tailwindcss": "^4.3.3"
+    "tailwindcss": "^4.3.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "razorpay": "^2.9.6"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
