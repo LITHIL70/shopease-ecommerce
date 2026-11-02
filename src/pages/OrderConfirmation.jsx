@@ -30,7 +30,7 @@ function OrderConfirmation() {
         <p className="mt-3 text-slate-600">Your ShopEase demo order has been placed successfully.</p>
         <p className="mt-5 text-sm text-slate-500">Order number</p>
         <p className="mt-1 text-xl font-bold text-indigo-600">{order.orderNumber}</p>
-        <p className="mt-2 text-xs text-slate-500">Demo only — no payment was processed.</p>
+        <p className="mt-2 text-xs text-slate-500">Demo transaction only — no real payment was processed.</p>\n        {order.paymentId && <p className="mt-2 text-xs text-slate-500">Demo payment reference: {order.paymentId}</p>}
       </section>
       <div className="mt-8 grid gap-6 md:grid-cols-2">
         <section className="rainbow-matte-panel rounded-2xl p-6">
