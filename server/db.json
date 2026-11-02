@@ -6,7 +6,7 @@
       "price": 699.99,
       "category": "mobiles",
       "description": "Apple iPhone 15 smartphone with modern performance, a capable camera and all-day battery life.",
-      "image": "https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/1.webp",
+      "image": "https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/1.webp",
       "brand": "Apple",
       "stock": 25,
       "rating": {
@@ -20,7 +20,7 @@
       "price": 749.99,
       "category": "mobiles",
       "description": "Samsung Galaxy S24 smartphone with modern performance, a capable camera and all-day battery life.",
-      "image": "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/1.webp",
+      "image": "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s10/1.webp",
       "brand": "Samsung",
       "stock": 25,
       "rating": {
@@ -104,7 +104,7 @@
       "price": 699,
       "category": "laptops",
       "description": "HP Pavilion 14 laptop for work, study and everyday productivity.",
-      "image": "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/1.webp",
+      "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=700&q=85",
       "brand": "HP",
       "stock": 25,
       "rating": {
@@ -202,7 +202,7 @@
       "price": 19.99,
       "category": "men-clothing",
       "description": "Men Classic Crew Neck T-Shirt, comfortable style for daily wear.",
-      "image": "https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/1.webp",
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85",
       "brand": "ShopEase",
       "stock": 25,
       "rating": {
@@ -286,7 +286,7 @@
       "price": 27.99,
       "category": "men-clothing",
       "description": "Men Cotton Polo Shirt, comfortable style for daily wear.",
-      "image": "https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/1.webp",
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85",
       "brand": "ShopEase",
       "stock": 25,
       "rating": {
@@ -314,7 +314,7 @@
       "price": 49.99,
       "category": "men-clothing",
       "description": "Men Formal Dress Shirt, comfortable style for daily wear.",
-      "image": "https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/1.webp",
+      "image": "https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/1.webp",
       "brand": "ShopEase",
       "stock": 25,
       "rating": {
@@ -454,7 +454,7 @@
       "price": 34.99,
       "category": "women-clothing",
       "description": "Women Midi Skirt, versatile clothing for everyday outfits.",
-      "image": "https://cdn.dummyjson.com/product-images/womens-dresses/corset-leather-with-skirt/1.webp",
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=85",
       "brand": "ShopEase",
       "stock": 25,
       "rating": {
@@ -482,7 +482,7 @@
       "price": 34.99,
       "category": "accessories",
       "description": "Canvas Backpack for your everyday needs.",
-      "image": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/1.webp",
+      "image": "https://cdn.dummyjson.com/product-images/womens-bags/white-faux-leather-backpack/1.webp",
       "brand": "ShopEase",
       "stock": 25,
       "rating": {
@@ -510,7 +510,7 @@
       "price": 49.99,
       "category": "accessories",
       "description": "Classic Everyday Watch for your everyday needs.",
-      "image": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/1.webp",
+      "image": "https://cdn.dummyjson.com/product-images/womens-watches/women's-wrist-watch/1.webp",
       "brand": "ShopEase",
       "stock": 25,
       "rating": {
@@ -524,7 +524,7 @@
       "price": 16.99,
       "category": "home",
       "description": "Stainless Steel Water Bottle for your everyday needs.",
-      "image": "https://cdn.dummyjson.com/product-images/home-decoration/decoration-swing/1.webp",
+      "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=700&q=85",
       "brand": "ShopEase",
       "stock": 25,
       "rating": {
@@ -580,7 +580,7 @@
       "price": 21.99,
       "category": "home",
       "description": "Ceramic Coffee Mug Set for your everyday needs.",
-      "image": "https://cdn.dummyjson.com/product-images/home-decoration/decoration-swing/1.webp",
+      "image": "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=700&q=85",
       "brand": "ShopEase",
       "stock": 25,
       "rating": {
@@ -594,7 +594,7 @@
       "price": 39.99,
       "category": "home",
       "description": "LED Monitor Light Bar for your everyday needs.",
-      "image": "https://cdn.dummyjson.com/product-images/home-decoration/decoration-swing/1.webp",
+      "image": "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?auto=format&fit=crop&w=700&q=85",
       "brand": "ShopEase",
       "stock": 25,
       "rating": {
@@ -608,7 +608,7 @@
       "price": 14.99,
       "category": "accessories",
       "description": "Travel Organizer Pouch for your everyday needs.",
-      "image": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/1.webp",
+      "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=700&q=85",
       "brand": "ShopEase",
       "stock": 25,
       "rating": {
