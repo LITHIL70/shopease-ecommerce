@@ -10,6 +10,7 @@ function Checkout() {
   const [paymentOpen, setPaymentOpen] = useState(false)
   const [paymentMethod, setPaymentMethod] = useState('upi')
   const [paymentStatus, setPaymentStatus] = useState('idle')
+  const [razorpayError, setRazorpayError] = useState('')
 
   function handleChange(event) {
     const { name, value } = event.target
@@ -57,6 +58,59 @@ function Checkout() {
         setPaymentOpen(false)
       }
     }, 2200)
+  }
+
+  function loadRazorpayScript() {
+    return new Promise((resolve) => {
+      if (window.Razorpay) return resolve(true)
+      const script = document.createElement('script')
+      script.src = 'https://checkout.razorpay.com/v1/checkout.js'
+      script.onload = () => resolve(true)
+      script.onerror = () => resolve(false)
+      document.body.appendChild(script)
+    })
+  }
+
+  async function payWithRazorpay() {
+    if (paymentStatus === 'processing') return
+    setRazorpayError('')
+    setPaymentStatus('processing')
+    try {
+      const loaded = await loadRazorpayScript()
+      if (!loaded) throw new Error('Could not load Razorpay Checkout. Check your internet connection.')
+      const orderResponse = await fetch('http://localhost:5001/api/razorpay/orders', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ amount: Math.round(cartTotal * 83 * 100) }),
+      })
+      const orderData = await orderResponse.json()
+      if (!orderResponse.ok) throw new Error(orderData.error || 'Could not create Razorpay order.')
+      const options = {
+        key: orderData.keyId, amount: orderData.amount, currency: orderData.currency,
+        name: 'ShopEase', description: 'ShopEase order payment (test mode)', order_id: orderData.orderId,
+        prefill: { name: form.fullName, email: form.email, contact: form.phone },
+        theme: { color: '#2563eb' },
+        handler: async (response) => {
+          try {
+            const verifyResponse = await fetch('http://localhost:5001/api/razorpay/verify', {
+              method: 'POST', headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ razorpay_order_id: response.razorpay_order_id, razorpay_payment_id: response.razorpay_payment_id, razorpay_signature: response.razorpay_signature }),
+            })
+            const verification = await verifyResponse.json()
+            if (!verifyResponse.ok || !verification.verified) throw new Error(verification.error || 'Payment verification failed.')
+            const order = { orderNumber: 'SE-' + Date.now().toString().slice(-8), paymentId: response.razorpay_payment_id, paymentMethod: 'razorpay', paymentStatus: 'PAID_TEST', customer: form, items: cart, itemCount: cartCount, subtotal: cartTotal, shipping: 0, total: cartTotal, createdAt: new Date().toISOString(), demo: true }
+            localStorage.setItem('shopease-last-order', JSON.stringify(order))
+            clearCart()
+            setPaymentStatus('success')
+            window.setTimeout(() => navigate('/order-confirmation'), 1100)
+          } catch (err) { setRazorpayError(err.message || 'Payment verification failed.'); setPaymentStatus('idle') }
+        },
+        modal: { ondismiss: () => setPaymentStatus('idle') },
+      }
+      setPaymentStatus('idle')
+      const razorpay = new window.Razorpay(options)
+      razorpay.on('payment.failed', (event) => { setRazorpayError(event.error && event.error.description ? event.error.description : 'Razorpay test payment failed.'); setPaymentStatus('idle') })
+      razorpay.open()
+    } catch (err) { setRazorpayError(err.message || 'Unable to start Razorpay payment.'); setPaymentStatus('idle') }
   }
 
   const inputClass = 'mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100'
@@ -153,15 +207,17 @@ function Checkout() {
                 <>
                   <h2 id="payment-title" className="text-lg font-bold text-slate-900">Choose payment method</h2>
                   <div className="mt-4 space-y-3">
-                    {[['upi','UPI','GPay · PhonePe · Paytm'],['card','Cards','Credit or debit card (demo)'],['netbanking','Netbanking','All major banks (demo)']].map(([value,label,sub]) => (
+                    {[['upi','UPI','GPay · PhonePe · Paytm'],['card','Cards','Credit or debit card (demo)'],['netbanking','Netbanking','All major banks (demo)'],['razorpay','Razorpay','Pay securely with Razorpay Test Mode']].map(([value,label,sub]) => (
                       <label key={value} className={`flex cursor-pointer items-center gap-3 rounded-xl border p-4 ${paymentMethod === value ? 'border-indigo-600 bg-indigo-50' : 'border-slate-200'}`}>
                         <input type="radio" name="paymentMethod" value={value} checked={paymentMethod === value} onChange={() => setPaymentMethod(value)} />
                         <span><span className="block font-semibold text-slate-800">{label}</span><span className="text-xs text-slate-500">{sub}</span></span>
                       </label>
                     ))}
                   </div>
-                  <p className="mt-4 rounded-lg bg-amber-50 p-3 text-xs leading-5 text-amber-800">Simulation only: this is not connected to Razorpay. Do not enter card, UPI, or banking credentials. No real transaction will occur.</p>
-                  <button onClick={simulatePayment} className="mt-5 w-full rounded-xl bg-[#2563eb] px-5 py-3.5 font-semibold text-white hover:bg-blue-700">Simulate payment · ₹{(cartTotal * 83).toFixed(2)}</button>
+                  <p className="mt-4 rounded-lg bg-amber-50 p-3 text-xs leading-5 text-amber-800">{paymentMethod === 'razorpay' ? 'Razorpay Test Mode: use test credentials only. No real money will be charged.' : 'Simulation only: this is not connected to Razorpay. Do not enter card, UPI, or banking credentials. No real transaction will occur.'}</p>
+                  {razorpayError && <p role="alert" className="mt-3 rounded-lg bg-red-50 p-3 text-xs text-red-700">{razorpayError}</p>}
+                  {paymentMethod === 'razorpay' ? <button onClick={payWithRazorpay} className="mt-5 w-full rounded-xl bg-[#2563eb] px-5 py-3.5 font-semibold text-white hover:bg-blue-700">Pay with Razorpay · ₹{(cartTotal * 83).toFixed(2)}</button> : <button onClick={simulatePayment} className="mt-5 w-full rounded-xl bg-[#2563eb] px-5 py-3.5 font-semibold text-white hover:bg-blue-700">Simulate payment · ₹{(cartTotal * 83).toFixed(2)}</button>
+                  </>}
                   <button onClick={() => setPaymentOpen(false)} className="mt-3 w-full rounded-xl px-5 py-2.5 text-sm font-semibold text-slate-500 hover:bg-slate-100">Cancel</button>
                 </>
               )}
