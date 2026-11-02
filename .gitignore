@@ -27,3 +27,5 @@ dist/
 .env
 .env.*
 !.env.example
+# JSON Server database backup files
+server/*.backup.json

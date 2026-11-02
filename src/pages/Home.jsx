@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { getProducts } from '../services/productApi'
-import extraProducts from '../data/extraProducts.json'
 import ProductCard from '../components/ProductCard'
 
 function Home() {
@@ -16,10 +15,10 @@ function Home() {
       setIsLoading(true)
       setErrorMessage('')
       const apiProducts = await getProducts()
-      setProducts([...apiProducts, ...extraProducts])
+      setProducts(apiProducts)
     } catch {
-      setProducts(extraProducts)
-      setErrorMessage('The online store could not load. Showing our sample products instead.')
+      setProducts([])
+      setErrorMessage('Unable to load products. Please make sure JSON Server is running on port 5000.')
     } finally {
       setIsLoading(false)
     }
