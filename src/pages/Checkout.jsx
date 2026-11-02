@@ -78,7 +78,7 @@ function Checkout() {
     try {
       const loaded = await loadRazorpayScript()
       if (!loaded) throw new Error('Could not load Razorpay Checkout. Check your internet connection.')
-      const orderResponse = await fetch('http://localhost:5001/api/razorpay/orders', {
+      const orderResponse = await fetch('/api/razorpay/orders', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ amount: Math.round(cartTotal * 83 * 100) }),
       })
@@ -91,7 +91,7 @@ function Checkout() {
         theme: { color: '#2563eb' },
         handler: async (response) => {
           try {
-            const verifyResponse = await fetch('http://localhost:5001/api/razorpay/verify', {
+            const verifyResponse = await fetch('/api/razorpay/verify', {
               method: 'POST', headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ razorpay_order_id: response.razorpay_order_id, razorpay_payment_id: response.razorpay_payment_id, razorpay_signature: response.razorpay_signature }),
             })
