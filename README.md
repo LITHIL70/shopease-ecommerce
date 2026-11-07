@@ -1,79 +1,71 @@
-# ShopEase E-Commerce
+# ShopEase — E-Commerce Web Application
 
-React + Tailwind CSS storefront backed by a local JSON Server REST API.
+ShopEase is a responsive e-commerce demonstration built with React and Tailwind CSS. It brings together a storefront, product browsing, shopping cart, wishlist, product detail pages, and a checkout flow.
 
-## Requirements
-- Node.js 18+
-- npm
+🌐 **Live demo:** [shopease-ecommerce-tan.vercel.app](https://shopease-ecommerce-tan.vercel.app/)
 
-## Run the project
+## Features
 
-From the project root, install dependencies:
+- Product catalogue backed by JSON Server
+- Product browsing and category-based filtering
+- Product detail routes
+- Shopping cart with quantity updates and item removal
+- Wishlist
+- Light/dark theme preference saved in browser storage
+- Checkout form with basic client-side validation
+- Order confirmation page
+- Razorpay checkout test-mode integration path and a separate simulated demo payment flow
+
+## Technology
+
+- React
+- React Router
+- Tailwind CSS
+- Vite
+- Axios
+- JSON Server
+- Express and Razorpay SDK (payment API code)
+
+## Run locally
+
+Requires Node.js and npm.
+
+1. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+2. Start the local product API in terminal 1:
+
+   ```bash
+   npm run server
+   ```
+
+   JSON Server listens on `http://localhost:5000`.
+
+3. Start the frontend in terminal 2:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open the local URL printed by Vite (commonly `http://localhost:5173`).
+
+## Environment configuration
+
+Copy `.env.example` to `.env` and set the API URL required by the frontend. The payment API also requires the appropriate Razorpay test credentials in its server-side environment. Never commit real secrets.
+
+## Payment and data notes
+
+- The cart, wishlist, and demo order information use browser `localStorage`.
+- A simulated checkout path is available for demonstration.
+- The Razorpay integration is configured as a test-mode flow; it must not be represented as live payment processing.
+- The local JSON Server catalogue is for development/demo use, not a production database.
+
+## Quality checks
 
 ```bash
-npm install
+npm run lint
+npm run build
 ```
-
-Start JSON Server in **Terminal 1**:
-
-```bash
-npm run server
-```
-
-The REST API runs at `http://localhost:5000`.
-
-Start React/Vite in **Terminal 2**:
-
-```bash
-npm run dev
-```
-
-Open the Vite URL shown in the terminal (usually `http://localhost:5173`).
-
-## Seed catalogue
-
-Database file: `server/db.json`
-
-- 5 mobile phones
-- 5 laptops
-- 4 computer mice
-- 10 men's clothing products
-- 10 women's clothing products
-- 10 additional home, accessories and electronics products
-
-## Thunder Client requests
-
-Use the Thunder Client VS Code extension to create these requests:
-
-| Method | URL | Purpose |
-|---|---|---|
-| GET | `http://localhost:5000/products` | List all products |
-| GET | `http://localhost:5000/products/1` | Get one product |
-| GET | `http://localhost:5000/products?category=mobiles` | Filter mobiles |
-| GET | `http://localhost:5000/products?category=men-clothing` | Filter men's clothing |
-| GET | `http://localhost:5000/categories` | List categories |
-| POST | `http://localhost:5000/products` | Add a product |
-| PUT | `http://localhost:5000/products/1` | Replace a product |
-| PATCH | `http://localhost:5000/products/1` | Update product fields |
-| DELETE | `http://localhost:5000/products/1` | Delete a product |
-
-For POST, PUT and PATCH, select JSON as the request body type. Example POST body:
-
-```json
-{
-  "title": "Sample Wireless Earbuds",
-  "price": 59.99,
-  "category": "electronics",
-  "description": "Bluetooth wireless earbuds.",
-  "image": "https://placehold.co/600x600?text=Earbuds",
-  "brand": "ShopEase",
-  "stock": 20,
-  "rating": { "rate": 4.5, "count": 12 }
-}
-```
-
-## Notes
-- Axios calls JSON Server at `http://localhost:5000`.
-- Cart, wishlist and demo checkout orders still use browser localStorage. The product catalogue is served by JSON Server.
-- This is a development/demo API, not a production database.
-- To change the API URL, copy `.env.example` to `.env` and edit `VITE_API_URL`.
